@@ -241,8 +241,9 @@ body {
 /* 标题和头像横向排列 */
 .description-title-row {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
+    gap: 10px;
     margin-bottom: 10px;
 }
 
@@ -254,7 +255,7 @@ body {
     line-height: 1.4;
     color: #000;
     margin: 0;
-    flex: 1;
+    flex-shrink: 0;
 }
 
 .product-description-header p {
@@ -264,7 +265,7 @@ body {
     font-size: 10px;
     line-height: 12px;
     color: #939292;
-    text-align: left;
+    text-align: justify;
 }
 
 /* 社交头像图标 */
@@ -907,13 +908,8 @@ body {
     }
     
     .description-title-row {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-wrap: wrap;
         gap: 8px;
-    }
-    
-    .social-icons {
-        align-self: flex-end;
     }
     
     /* 历史文化区域 */
