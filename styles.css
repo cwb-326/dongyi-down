@@ -236,15 +236,17 @@ body {
     margin-left: 107px;
     width: calc(100% - 107px);
     max-width: 327px;
+    display: flex;
+    flex-direction: column;
 }
 
 /* 标题和头像横向排列 */
 .description-title-row {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
-    gap: 10px;
     margin-bottom: 10px;
+    width: 100%;
 }
 
 .product-description-header h2 {
@@ -255,7 +257,7 @@ body {
     line-height: 1.4;
     color: #000;
     margin: 0;
-    flex-shrink: 0;
+    white-space: nowrap;
 }
 
 .product-description-header p {
@@ -266,14 +268,13 @@ body {
     line-height: 12px;
     color: #939292;
     text-align: justify;
-    text-justify: inter-ideograph;
-    word-break: break-all;
+    text-align-last: left;
+    width: 214px;
 }
 
-/* 社交头像图标 */
+/* 社交头像图标 - 部分堆叠 */
 .social-icons {
     display: flex;
-    gap: 7px;
     flex-shrink: 0;
 }
 
@@ -282,6 +283,12 @@ body {
     height: 25px;
     border-radius: 50%;
     object-fit: cover;
+    border: 2px solid #fff;
+    margin-left: -8px;
+}
+
+.social-icons img:first-child {
+    margin-left: 0;
 }
 
 /* 分类标签 - 在头部内 */
