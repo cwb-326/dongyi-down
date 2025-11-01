@@ -9,7 +9,7 @@ body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', sans-serif;
     line-height: 1.6;
     color: #000;
-    background-color: #f5f5f5;
+    background-color: #fff;
 }
 
 .container {
@@ -120,7 +120,7 @@ body {
 
 /* ========== 主页面样式 ========== */
 .main-page {
-    background: #f5f5f5;
+    background: #fff;
     min-height: 100vh;
     padding: 20px 0;
 }
@@ -135,9 +135,10 @@ body {
 /* 头部横幅 */
 .header-banner {
     position: relative;
-    height: 336px;
+    height: 465px;
     background: linear-gradient(180deg, rgba(248, 215, 124, 1) 0%, rgba(246, 236, 142, 1) 25%, rgba(243, 232, 160, 1) 48%, rgba(248, 243, 206, 1) 68%, rgba(253, 253, 253, 1) 100%);
     border-radius: 10px 10px 0 0;
+    padding-bottom: 0;
 }
 
 .header-search {
@@ -209,6 +210,35 @@ body {
     object-fit: cover;
 }
 
+/* 产品描述文字 - 在头部内 */
+.product-description-header {
+    position: absolute;
+    top: 347px;
+    left: 126px;
+    width: 214px;
+    height: 76px;
+    z-index: 10;
+}
+
+.product-description-header h2 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #000;
+    margin-bottom: 8px;
+}
+
+.product-description-header p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: #939292;
+}
+
 .social-icons {
     position: absolute;
     top: 346px;
@@ -225,82 +255,56 @@ body {
     object-fit: cover;
 }
 
-/* 分类标签 */
-.category-tag {
-    position: relative;
-    margin-top: 102px;
-    margin-left: 13px;
+/* 分类标签 - 在头部内 */
+.category-tag-in-header {
+    position: absolute;
+    top: 438px;
+    left: 13px;
+    height: 27px;
 }
 
-.category-tag span {
+.category-tag-in-header span {
     display: inline-block;
-    padding: 6px 16px;
+    padding: 6px 12px;
     background: #F5ECB1;
     border-radius: 30px;
     font-size: 12px;
+    line-height: 1.2102272510528564em;
     color: #997332;
+    white-space: nowrap;
 }
 
-/* 产品介绍 */
-.product-intro {
-    position: relative;
-    padding: 30px 12px;
-}
 
-.product-main-image {
-    width: 378px;
-    height: 378px;
-    margin: 0 auto 20px;
-    border-radius: 20px;
-    overflow: hidden;
-}
-
-.product-main-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.product-description {
-    padding: 20px;
-}
-
-.product-description h2 {
-    font-size: 14px;
-    font-weight: 400;
+/* 白鸭绒的历史与文化 - 标题独立 */
+.section-title-standalone {
+    margin-left: 16px;
+    margin-top: 10px;
     margin-bottom: 10px;
-    color: #000;
 }
 
-.product-description p {
-    font-size: 10px;
-    line-height: 1.6;
+.section-title-standalone .title-line1 {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.2102272033691406em;
     color: #000;
+    margin-bottom: 8px;
 }
 
-/* 历史与文化 */
+.section-title-standalone .title-line2 {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.2102272033691406em;
+    color: #939292;
+}
+
+/* 历史与文化内容框 */
 .history-culture {
     padding: 40px 43px;
     border: 1px solid #939292;
     border-radius: 30px;
-    margin: 20px 12px;
-}
-
-.section-header {
-    margin-bottom: 20px;
-}
-
-.title-line1 {
-    font-size: 20px;
-    color: #000;
-    font-weight: 400;
-    margin-bottom: 8px;
-}
-
-.title-line2 {
-    font-size: 20px;
-    color: #939292;
-    font-weight: 400;
+    margin: 5px 12px 20px;
 }
 
 .content-block {
@@ -308,16 +312,23 @@ body {
 }
 
 .content-block h3 {
-    font-size: 12px;
-    color: #000;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: #000000;
     margin-bottom: 10px;
     margin-top: 20px;
 }
 
 .content-block p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
     font-size: 10px;
-    line-height: 1.6;
-    color: #000;
+    line-height: 12px;
+    color: #939292;
     margin-bottom: 12px;
 }
 
@@ -328,8 +339,12 @@ body {
 }
 
 .feature-list li {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
     font-size: 10px;
-    color: #000;
+    line-height: 12px;
+    color: #939292;
     margin-bottom: 8px;
     position: relative;
 }
@@ -338,19 +353,41 @@ body {
     content: "• ";
     position: absolute;
     left: -15px;
+    color: #939292;
 }
 
 .highlight-quote {
-    background: #f5f5f5;
-    padding: 20px;
+    position: relative;
+    width: 375px;
+    height: 27px;
+    background: #F5ECB1;
+    border-radius: 3px 10px 10px 3px;
     margin: 20px 0;
-    border-left: 3px solid #F8D77C;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    padding-left: 9px;
+}
+
+.highlight-quote::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3px;
+    height: 27px;
+    background: #F8C072;
+    border-radius: 3px 0 0 3px;
 }
 
 .highlight-quote p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
     font-size: 10px;
+    line-height: 12px;
     color: #939292;
-    font-style: italic;
+    margin: 0;
 }
 
 .divider {
@@ -360,12 +397,30 @@ body {
     margin: 30px 0;
 }
 
+.farm-image {
+    width: 378px;
+    height: 378px;
+    margin: 20px 0 10px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.farm-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .image-caption {
     margin-top: 10px;
 }
 
 .image-caption p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
     font-size: 10px;
+    line-height: 12px;
     color: #939292;
     text-align: center;
 }
@@ -374,6 +429,7 @@ body {
     background: rgba(245, 245, 245, 0.5);
     padding: 20px;
     border-radius: 10px;
+    margin-bottom:8px;
 }
 
 .culture-heritage p {
@@ -382,7 +438,7 @@ body {
 
 /* 客户评价 */
 .testimonials {
-    padding: 40px 12px;
+    padding: 20px 12px 20px;
 }
 
 .testimonials h2 {
@@ -394,8 +450,12 @@ body {
 .testimonial-item {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     gap: 10px;
+}
+
+.testimonial-item:last-child {
+    margin-bottom: 0;
 }
 
 .testimonial-item .avatar {
@@ -444,127 +504,183 @@ body {
 
 /* 产品核心优势 */
 .core-advantages {
-    padding: 40px 12px;
-    border: 1px solid #939292;
-    border-radius: 30px;
-    margin: 20px 11px;
+    padding: 15px 12px 25px;
+    margin: 5px 11px 15px;
 }
 
 .core-advantages h2 {
-    font-size: 12px;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.2102272510528564em;
     text-align: center;
+    color: #000000;
     margin-bottom: 10px;
 }
 
 .core-advantages .intro {
-    font-size: 12px;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 1.2102272510528564em;
     text-align: center;
-    color: #000;
-    margin-bottom: 30px;
+    color: #939292;
+    margin-bottom: 20px;
 }
 
 .advantages-grid {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-rows: repeat(3, 1fr);
+    border: 1px solid #939292;
+    border-radius: 30px;
 }
 
 .advantage-item {
+    position: relative;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    padding: 20px 10px;
+    border-right: 1px solid #939292;
+    border-bottom: 1px solid #939292;
+}
+
+/* 移除右列的右边框 */
+.advantage-item:nth-child(2n) {
+    border-right: none;
+}
+
+/* 移除最后一行的底边框 */
+.advantage-item:nth-child(5),
+.advantage-item:nth-child(6) {
+    border-bottom: none;
+}
+
+/* 图标和标题横向排列 */
+.advantage-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
 .advantage-item .icon {
     width: 16px;
     height: 16px;
-    margin: 0 auto 10px;
-    color: #000;
+    flex-shrink: 0;
 }
 
-.advantage-item .icon svg {
+.advantage-item .icon img {
     width: 100%;
     height: 100%;
+    display: block;
 }
 
 .advantage-item h3 {
+    font-family: 'Inter';
+    font-weight: 400;
     font-size: 14px;
-    margin-bottom: 10px;
+    line-height: 1.2102272851126534em;
     color: #000;
+    margin: 0;
 }
 
 .advantage-item p {
-    font-size: 14px;
-    line-height: 1.6;
-    color: #000;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.2102272851126534em;
     text-align: center;
+    color: #939292;
 }
 
 /* 检验检测数据 */
 .inspection-data {
-    padding: 40px 12px;
-}
-
-.inspection-data h2 {
-    font-size: 20px;
-    margin-bottom: 20px;
+    padding: 15px 12px;
+    margin: 15px 0;
+    background: #fff;
 }
 
 .batch-info {
-    background: #f5f5f5;
-    padding: 20px;
-    margin-bottom: 20px;
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
 }
 
 .batch-info p {
-    font-size: 13px;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.2102272033691406em;
     color: #000;
-    line-height: 1.8;
+    margin-bottom: 8px;
+}
+
+.inspection-table-wrapper {
+    margin: 15px 0;
+}
+
+.table-title {
+    background: #D9D9D9;
+    padding: 6px 12px;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.2102272033691406em;
+    color: #000;
+    margin-bottom: 0;
 }
 
 .inspection-table {
-    background: #f5f5f5;
-    padding: 20px;
-    overflow-x: auto;
-}
-
-.inspection-table table {
     width: 100%;
     border-collapse: collapse;
+    background: #fff;
 }
 
 .inspection-table th,
 .inspection-table td {
-    padding: 12px 8px;
-    text-align: center;
+    padding: 8px 6px;
+    text-align: left;
+    font-family: 'Inter';
+    font-weight: 400;
     font-size: 13px;
+    line-height: 1.2102272327129657em;
+    color: #000;
     border-bottom: 1px solid #e0e0e0;
 }
 
 .inspection-table th {
-    font-weight: 600;
-    color: #000;
-    text-align: left;
+    font-weight: 400;
+    background: #F5F5F5;
 }
 
 .inspection-table td {
-    color: #000;
     text-align: center;
+}
+
+.inspection-table th:first-child,
+.inspection-table td:first-child {
+    text-align: left;
 }
 
 /* 电子检测报告 */
 .inspection-reports {
-    padding: 40px 12px;
-    background: #f5f5f5;
+    padding: 25px 12px 15px;
+    background: #fff;
 }
 
 .inspection-reports h2 {
     font-size: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
 }
 
 .reports-grid {
     display: grid;
-    gap: 20px;
+    gap: 12px;
 }
 
 .reports-grid img {
@@ -576,28 +692,35 @@ body {
 
 /* 品质画廊 */
 .quality-gallery {
-    padding: 40px 34px;
+    padding: 0;
+    background: #fff;
 }
 
 .quality-gallery h2 {
     font-size: 20px;
     line-height: 1.4;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
+    text-align: center;
+    color: #939292;
+}
+
+.quality-gallery h2 .title-brand {
+    color: #000000;
 }
 
 .gallery-intro {
     font-size: 10px;
     color: #939292;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     line-height: 1.6;
 }
 
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    margin-bottom: 30px;
+    gap: 12px;
+    margin-bottom: 15px;
 }
 
 .gallery-item {
@@ -612,37 +735,55 @@ body {
 }
 
 .gallery-label {
-    background: #F5F5F5;
-    padding: 8px 10px;
-    margin-top: 5px;
+    background: #fff;
+    padding: 6px 10px;
+    margin-top: 3px;
     border-radius: 5px;
 }
 
 .label-title {
     font-size: 10px;
     color: #939292;
-    margin-bottom: 3px;
+    margin-bottom: 2px;
 }
 
 .label-subtitle {
     font-size: 13px;
-    color: #000;
+    color: #000000;
+}
+
+/* 品质画廊大图 */
+.gallery-main-image {
+    width: 417px;
+    height: 416px;
+    margin: 36px auto 0;
+}
+
+.gallery-main-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    object-fit: cover;
 }
 
 /* 产品细节展示 */
 .product-details {
-    padding: 40px 20px;
+    padding: 25px 20px 20px;
 }
 
 .detail-item {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+}
+
+.detail-item:last-child {
+    margin-bottom: 0;
 }
 
 .detail-item img {
     width: 100%;
     max-width: 406px;
     height: auto;
-    margin: 0 auto 20px;
+    margin: 0 auto 12px;
     display: block;
     border-radius: 5px;
 }
@@ -653,27 +794,31 @@ body {
 
 .detail-text h3 {
     font-size: 13px;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
     color: #000;
 }
 
 .detail-text p {
     font-size: 13px;
     line-height: 1.6;
-    color: #000;
+    color: #939292;
+    text-indent: 2em;
+    margin-bottom: 0;
 }
 
 /* 页脚 */
 .footer {
-    background: #f5f5f5;
-    padding: 30px 20px;
+    background: #fff;
+    padding: 0 20px 30px;
+    margin-top: 0;
     text-align: left;
 }
 
 .footer-content p {
     font-size: 13px;
     color: #000;
-    line-height: 2;
+    line-height: 1.6;
+    margin-bottom: 8px;
 }
 
 /* 响应式设计 */
