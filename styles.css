@@ -144,21 +144,14 @@ body {
 
 /* 头部横幅 */
 .header-banner {
-    position: relative;
-    min-height: 465px;
-    height: auto;
     background: linear-gradient(180deg, rgba(248, 215, 124, 1) 0%, rgba(246, 236, 142, 1) 25%, rgba(243, 232, 160, 1) 48%, rgba(248, 243, 206, 1) 68%, rgba(253, 253, 253, 1) 100%);
     border-radius: 10px 10px 0 0;
-    padding-bottom: 0;
+    padding: 15px 20px 20px;
     overflow: hidden;
 }
 
 .header-search {
-    position: absolute;
-    top: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% - 76px);
+    width: 100%;
     max-width: 382px;
     height: 32px;
     background: #FFFEFE;
@@ -166,6 +159,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 auto 20px;
 }
 
 .brand-name {
@@ -174,38 +168,40 @@ body {
 }
 
 .main-title {
-    position: absolute;
-    top: 73px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% - 66px);
+    width: 100%;
     max-width: 392px;
     font-size: 20px;
     text-align: center;
     color: #000;
     font-weight: 400;
+    margin: 0 auto 15px;
 }
 
 .subtitle {
-    position: absolute;
-    top: 117px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% - 66px);
+    width: 100%;
     max-width: 392px;
     font-size: 10px;
     line-height: 1.6;
     color: #939292;
+    margin: 0 auto 20px;
+    text-align: center;
+}
+
+/* 图片容器：地球图标和羽绒图片左右排列 */
+.header-images-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 0 auto 20px;
+    max-width: 100%;
 }
 
 .globe-icon {
-    position: absolute;
-    top: 164px;
-    left: 2%;
-    width: 21%;
-    max-width: 97.04px;
+    width: 97px;
+    min-width: 97px;
     height: auto;
     aspect-ratio: 1;
+    flex-shrink: 0;
 }
 
 .globe-icon img {
@@ -215,34 +211,26 @@ body {
 }
 
 .header-image {
-    position: absolute;
-    top: 165px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% - 131px);
+    flex: 1;
     max-width: 327px;
     height: auto;
-    min-height: 171px;
     border-radius: 10px;
     overflow: hidden;
 }
 
 .header-image img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
+    display: block;
 }
 
 /* 产品描述文字 - 在头部内 */
 .product-description-header {
-    position: absolute;
-    top: 347px;
-    left: 28%;
-    width: 47%;
-    max-width: 214px;
-    min-height: 76px;
-    height: auto;
-    z-index: 10;
+    width: 100%;
+    max-width: 392px;
+    margin: 0 auto 20px;
+    text-align: center;
 }
 
 .product-description-header h2 {
@@ -265,12 +253,10 @@ body {
 }
 
 .social-icons {
-    position: absolute;
-    top: 346px;
-    right: 13px;
     display: flex;
     gap: 7px;
-    z-index: 10;
+    justify-content: center;
+    margin: 0 auto 20px;
 }
 
 .social-icons img {
@@ -282,10 +268,8 @@ body {
 
 /* 分类标签 - 在头部内 */
 .category-tag-in-header {
-    position: absolute;
-    top: 438px;
-    left: 13px;
-    height: 27px;
+    text-align: left;
+    margin-bottom: 10px;
 }
 
 .category-tag-in-header span {
@@ -879,22 +863,20 @@ body {
     /* 头部横幅适配 */
     .header-banner {
         border-radius: 0;
+        padding: 15px 10px 20px;
     }
     
     .main-title {
         font-size: 18px;
     }
     
+    .header-images-container {
+        gap: 8px;
+    }
+    
     .globe-icon {
-        width: 18%;
-    }
-    
-    .social-icons {
-        right: 3%;
-    }
-    
-    .category-tag-in-header {
-        left: 3%;
+        width: 80px;
+        min-width: 80px;
     }
     
     /* 历史文化区域 */
@@ -995,6 +977,15 @@ body {
         font-size: 9px;
     }
     
+    .header-images-container {
+        gap: 5px;
+    }
+    
+    .globe-icon {
+        width: 70px;
+        min-width: 70px;
+    }
+    
     .product-description-header h2 {
         font-size: 12px;
     }
@@ -1016,10 +1007,6 @@ body {
     
     .batch-info p {
         font-size: 12px;
-    }
-    
-    .globe-icon {
-        width: 16%;
     }
     
     .advantage-item h3 {
