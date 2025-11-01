@@ -18,6 +18,14 @@ body {
     margin: 0 auto;
     background: #fff;
     width: 100%;
+    padding: 0;
+}
+
+@media (max-width: 458px) {
+    .container {
+        max-width: 100%;
+        width: 100%;
+    }
 }
 
 /* ========== 欢迎页样式 ========== */
@@ -137,17 +145,21 @@ body {
 /* 头部横幅 */
 .header-banner {
     position: relative;
-    height: 465px;
+    min-height: 465px;
+    height: auto;
     background: linear-gradient(180deg, rgba(248, 215, 124, 1) 0%, rgba(246, 236, 142, 1) 25%, rgba(243, 232, 160, 1) 48%, rgba(248, 243, 206, 1) 68%, rgba(253, 253, 253, 1) 100%);
     border-radius: 10px 10px 0 0;
     padding-bottom: 0;
+    overflow: hidden;
 }
 
 .header-search {
     position: absolute;
     top: 15px;
-    left: 38px;
-    width: 382px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 76px);
+    max-width: 382px;
     height: 32px;
     background: #FFFEFE;
     border-radius: 30px;
@@ -164,8 +176,10 @@ body {
 .main-title {
     position: absolute;
     top: 73px;
-    left: 33px;
-    width: 392px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 66px);
+    max-width: 392px;
     font-size: 20px;
     text-align: center;
     color: #000;
@@ -175,8 +189,10 @@ body {
 .subtitle {
     position: absolute;
     top: 117px;
-    left: 33px;
-    width: 392px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 66px);
+    max-width: 392px;
     font-size: 10px;
     line-height: 1.6;
     color: #939292;
@@ -185,9 +201,11 @@ body {
 .globe-icon {
     position: absolute;
     top: 164px;
-    left: 10.92px;
-    width: 97.04px;
-    height: 97.04px;
+    left: 2%;
+    width: 21%;
+    max-width: 97.04px;
+    height: auto;
+    aspect-ratio: 1;
 }
 
 .globe-icon img {
@@ -199,9 +217,12 @@ body {
 .header-image {
     position: absolute;
     top: 165px;
-    left: 118px;
-    width: 327px;
-    height: 171px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 131px);
+    max-width: 327px;
+    height: auto;
+    min-height: 171px;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -216,9 +237,11 @@ body {
 .product-description-header {
     position: absolute;
     top: 347px;
-    left: 126px;
-    width: 214px;
-    height: 76px;
+    left: 28%;
+    width: 47%;
+    max-width: 214px;
+    min-height: 76px;
+    height: auto;
     z-index: 10;
 }
 
@@ -360,8 +383,10 @@ body {
 
 .highlight-quote {
     position: relative;
-    width: 375px;
-    height: 27px;
+    width: 100%;
+    max-width: 375px;
+    min-height: 27px;
+    height: auto;
     background: #F5ECB1;
     border-radius: 3px 10px 10px 3px;
     margin: 20px 0;
@@ -369,6 +394,9 @@ body {
     display: flex;
     align-items: center;
     padding-left: 9px;
+    padding-right: 9px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .highlight-quote::before {
@@ -400,9 +428,11 @@ body {
 }
 
 .farm-image {
-    width: 378px;
-    height: 378px;
-    margin: 20px 0 10px;
+    width: 100%;
+    max-width: 378px;
+    height: auto;
+    aspect-ratio: 1;
+    margin: 20px auto 10px;
     border-radius: 20px;
     overflow: hidden;
 }
@@ -761,8 +791,10 @@ body {
 
 /* 品质画廊大图 */
 .gallery-main-image {
-    width: 417px;
-    height: 416px;
+    width: 100%;
+    max-width: 417px;
+    height: auto;
+    aspect-ratio: 1;
     margin: 36px auto 0;
 }
 
@@ -832,96 +864,54 @@ body {
 @media (max-width: 480px) {
     .container {
         max-width: 100%;
-        padding: 0 10px;
+        padding: 0;
     }
     
     .main-page {
-        padding: 10px 0;
+        padding: 0;
     }
     
     .main-container {
-        border-radius: 5px;
+        border-radius: 0;
+        box-shadow: none;
     }
     
     /* 头部横幅适配 */
     .header-banner {
-        height: auto;
-        min-height: 465px;
-        padding: 0 10px;
-    }
-    
-    .header-search {
-        left: 5%;
-        width: 90%;
-        max-width: 382px;
+        border-radius: 0;
     }
     
     .main-title {
-        left: 5%;
-        width: 90%;
-        max-width: 392px;
         font-size: 18px;
     }
     
-    .subtitle {
-        left: 5%;
-        width: 90%;
-        max-width: 392px;
-    }
-    
     .globe-icon {
-        left: 2%;
-        width: 80px;
-        height: 80px;
-    }
-    
-    .header-image {
-        left: 25%;
-        width: 70%;
-        max-width: 327px;
-        height: auto;
-    }
-    
-    .product-description-header {
-        left: 28%;
-        width: 47%;
-        max-width: 214px;
+        width: 18%;
     }
     
     .social-icons {
-        right: 5%;
+        right: 3%;
     }
     
     .category-tag-in-header {
-        left: 5%;
+        left: 3%;
     }
     
     /* 历史文化区域 */
     .history-culture {
-        padding: 30px 20px;
-        margin: 5px 0 20px;
+        padding: 30px 15px;
+        margin: 10px;
+        border-radius: 20px;
     }
     
-    .highlight-quote {
-        width: 100%;
-        max-width: 375px;
-    }
-    
-    .farm-image {
-        width: 100%;
-        max-width: 378px;
-        height: auto;
-        aspect-ratio: 1;
+    .section-title-standalone {
+        margin-left: 10px;
     }
     
     /* 核心优势区域 */
     .core-advantages {
-        margin: 5px 0 15px;
-        padding: 15px 5px 25px;
-    }
-    
-    .advantages-grid {
-        margin: 0 auto;
+        margin: 10px;
+        padding: 15px 10px 25px;
     }
     
     .advantage-item {
@@ -929,33 +919,44 @@ body {
     }
     
     .advantage-item h3 {
-        font-size: 13px;
-    }
-    
-    .advantage-item p {
         font-size: 12px;
     }
     
-    /* 表格适配 */
-    .inspection-table {
+    .advantage-item p {
         font-size: 11px;
+    }
+    
+    /* 表格适配 */
+    .inspection-data {
+        padding: 15px 10px;
+    }
+    
+    .inspection-table {
+        font-size: 10px;
         min-width: 100%;
     }
     
     .inspection-table th,
     .inspection-table td {
-        padding: 6px 4px;
-        font-size: 11px;
+        padding: 6px 3px;
+        font-size: 10px;
         white-space: normal;
         word-wrap: break-word;
     }
     
+    /* 电子检测报告 */
+    .inspection-reports {
+        padding: 20px 10px 15px;
+    }
+    
     /* 品质画廊 */
-    .gallery-main-image {
-        width: 100%;
-        max-width: 417px;
-        height: auto;
-        aspect-ratio: 1;
+    .quality-gallery {
+        padding: 20px 10px;
+    }
+    
+    .gallery-grid {
+        gap: 8px;
+        padding: 0 10px;
     }
     
     /* 产品细节 */
@@ -964,7 +965,23 @@ body {
     }
     
     .detail-text {
-        padding: 0 10px;
+        padding: 0 5px;
+    }
+    
+    /* 客户评价 */
+    .testimonials {
+        padding: 20px 10px;
+    }
+    
+    /* 探索区域 */
+    .explore-section {
+        margin: 20px 10px;
+        padding: 30px 20px;
+    }
+    
+    /* 页脚 */
+    .footer {
+        padding: 0 15px 30px;
     }
 }
 
@@ -978,16 +995,6 @@ body {
         font-size: 9px;
     }
     
-    .header-image {
-        left: 22%;
-        width: 75%;
-    }
-    
-    .product-description-header {
-        left: 25%;
-        width: 50%;
-    }
-    
     .product-description-header h2 {
         font-size: 12px;
     }
@@ -997,17 +1004,30 @@ body {
     }
     
     .history-culture {
-        padding: 20px 15px;
+        padding: 20px 10px;
+        margin: 5px;
     }
     
     .inspection-table th,
     .inspection-table td {
         padding: 4px 2px;
-        font-size: 10px;
+        font-size: 9px;
     }
     
     .batch-info p {
-        font-size: 13px;
+        font-size: 12px;
+    }
+    
+    .globe-icon {
+        width: 16%;
+    }
+    
+    .advantage-item h3 {
+        font-size: 11px;
+    }
+    
+    .advantage-item p {
+        font-size: 10px;
     }
 }
 
@@ -1032,19 +1052,5 @@ img {
 /* 防止内容溢出 */
 .main-container {
     overflow-x: hidden;
-}
-
-.header-banner * {
-    max-width: 100%;
-}
-
-/* 确保所有固定宽度元素适配 */
-@media (max-width: 458px) {
-    .header-search,
-    .main-title,
-    .subtitle,
-    .product-description-header {
-        max-width: calc(100% - 20px);
-    }
 }
 
