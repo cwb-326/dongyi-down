@@ -4,7 +4,8 @@
       "Bash(claude mcp:*)",
       "Bash(where:*)",
       "mcp__playwright__browser_navigate",
-      "mcp__playwright__browser_wait_for"
+      "mcp__playwright__browser_wait_for",
+      "Bash(git add:*)"
     ],
     "deny": [],
     "ask": []
