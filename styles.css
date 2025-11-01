@@ -266,6 +266,8 @@ body {
     line-height: 12px;
     color: #939292;
     text-align: justify;
+    text-justify: inter-ideograph;
+    word-break: break-all;
 }
 
 /* 社交头像图标 */
